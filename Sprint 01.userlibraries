@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="mysql-connector-java-5.0.8-bin">
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/mysql-connector-java-5.0.8-bin.jar" />
+  </library>
+  <library name="org-netbeans-lib-profiler">
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/org-netbeans-lib-profiler.jar" />
+  </library>
+  <library name="org-netbeans-lib-profiler-ui">
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/org-netbeans-lib-profiler-ui.jar" />
+  </library>
+  <library name="apache-mime4j-0.3">
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/apache-mime4j-0.3.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/commons-io-1.4.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/DJNativeSwing-SWT.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/DJNativeSwing.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/httpclient-4.1-alpha1.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/httpcore-4.1-alpha1.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/httpmime-4.0-alpha4.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/java-json.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/javax.mail.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/jcalendar-1.4.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/jcommon-1.0.21.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/jcommon-1.0.23.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/jfreechart-1.0.17.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/jfreechart-1.0.19.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/org.apache.commons.logging-1.1.1.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/restfb-1.8.0.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/swingx-all-1.6.5-1.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/swingx-ws-r317.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/swt.jar" />
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/weblaf-complete-1.28.jar" />
+  </library>
+  <library name="AbsoluteLayout">
+    <archive path="C:/Users/FATHLLAH Wael/Downloads/Sprint 01/lib/AbsoluteLayout.jar" />
+  </library>
+</eclipse-userlibraries>
+

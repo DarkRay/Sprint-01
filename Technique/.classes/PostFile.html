@@ -1,0 +1,153 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: PostFile</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">Technique</a> ]
+</div>
+
+<h1>Coverage Summary for Class: PostFile (Technique)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">PostFile</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 3)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 24)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;/*
+<i>2</i>&nbsp; * To change this license header, choose License Headers in Project Properties.
+<i>3</i>&nbsp; * To change this template file, choose Tools | Templates
+<i>4</i>&nbsp; * and open the template in the editor.
+<i>5</i>&nbsp; */
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;package Technique;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;/**
+<i>10</i>&nbsp; *
+<i>11</i>&nbsp; * @author FATHLLAH Wael
+<i>12</i>&nbsp; */
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;import java.io.File;
+<i>15</i>&nbsp;import org.apache.http.HttpEntity;
+<i>16</i>&nbsp;import org.apache.http.HttpResponse;
+<i>17</i>&nbsp;import org.apache.http.HttpVersion;
+<i>18</i>&nbsp;import org.apache.http.client.HttpClient;
+<i>19</i>&nbsp;import org.apache.http.client.methods.HttpPost;
+<i>20</i>&nbsp;import org.apache.http.entity.mime.MultipartEntity;
+<i>21</i>&nbsp;import org.apache.http.entity.mime.content.ContentBody;
+<i>22</i>&nbsp;import org.apache.http.entity.mime.content.FileBody;
+<i>23</i>&nbsp;import org.apache.http.impl.client.DefaultHttpClient;
+<i>24</i>&nbsp;import org.apache.http.params.CoreProtocolPNames;
+<i>25</i>&nbsp;import org.apache.http.util.EntityUtils;
+<i>26</i>&nbsp; 
+<i>27</i>&nbsp; 
+<b class="nc"><i>28</i>&nbsp;public class PostFile {</b>
+<i>29</i>&nbsp;  
+<i>30</i>&nbsp;    public static void upload(String files) throws Exception {
+<i>31</i>&nbsp; 
+<b class="nc"><i>32</i>&nbsp;        String userHome=System.getProperty(&quot;user.home&quot;);</b>
+<b class="nc"><i>33</i>&nbsp;        HttpClient httpclient = new DefaultHttpClient();</b>
+<b class="nc"><i>34</i>&nbsp;        httpclient.getParams().setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);</b>
+<b class="nc"><i>35</i>&nbsp;        HttpPost httppost = new HttpPost(&quot;http://localhost/image/up.php&quot;);</b>
+<b class="nc"><i>36</i>&nbsp;        File file = new File(files);</b>
+<b class="nc"><i>37</i>&nbsp;        MultipartEntity mpEntity = new MultipartEntity();</b>
+<b class="nc"><i>38</i>&nbsp;        ContentBody contentFile = new FileBody(file);</b>
+<b class="nc"><i>39</i>&nbsp;        mpEntity.addPart(&quot;userfile&quot;, contentFile);</b>
+<b class="nc"><i>40</i>&nbsp;        httppost.setEntity(mpEntity);</b>
+<b class="nc"><i>41</i>&nbsp;        System.out.println(&quot;executing request &quot; + httppost.getRequestLine());</b>
+<b class="nc"><i>42</i>&nbsp;        HttpResponse response = httpclient.execute(httppost);</b>
+<b class="nc"><i>43</i>&nbsp;        HttpEntity resEntity = response.getEntity();</b>
+<i>44</i>&nbsp; 
+<b class="nc"><i>45</i>&nbsp;        if(!(response.getStatusLine().toString()).equals(&quot;HTTP/1.1 200 OK&quot;)){</b>
+<i>46</i>&nbsp;            // Successfully Uploaded
+<i>47</i>&nbsp;        }
+<i>48</i>&nbsp;        else{
+<i>49</i>&nbsp;            // Did not upload. Add your logic here. Maybe you want to retry.
+<i>50</i>&nbsp;        }
+<b class="nc"><i>51</i>&nbsp;        System.out.println(response.getStatusLine());</b>
+<b class="nc"><i>52</i>&nbsp;        if (resEntity != null) {</b>
+<b class="nc"><i>53</i>&nbsp;            System.out.println(EntityUtils.toString(resEntity));</b>
+<i>54</i>&nbsp;        }
+<b class="nc"><i>55</i>&nbsp;        if (resEntity != null) {</b>
+<b class="nc"><i>56</i>&nbsp;            resEntity.consumeContent();</b>
+<i>57</i>&nbsp;        }
+<b class="nc"><i>58</i>&nbsp;        httpclient.getConnectionManager().shutdown();</b>
+<i>59</i>&nbsp;    }
+<i>60</i>&nbsp; 
+<i>61</i>&nbsp;  public static void main(String[] args)
+<i>62</i>&nbsp;  {
+<i>63</i>&nbsp;      try {
+<b class="nc"><i>64</i>&nbsp;        PostFile.upload(&quot;C:\\Users\\FATHLLAH Wael\\Pictures\\bird-text-funny-wallpaper-1920x1200.jpg&quot;);</b>
+<b class="nc"><i>65</i>&nbsp;    } catch (Exception e) {</b>
+<i>66</i>&nbsp; 
+<b class="nc"><i>67</i>&nbsp;        e.printStackTrace();</b>
+<b class="nc"><i>68</i>&nbsp;    }</b>
+<i>69</i>&nbsp;  }
+<i>70</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2015-05-16 11:20</div>
+</div>
+</body>
+</html>

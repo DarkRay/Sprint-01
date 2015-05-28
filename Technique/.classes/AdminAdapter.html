@@ -1,0 +1,155 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: AdminAdapter</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">Technique</a> ]
+</div>
+
+<h1>Coverage Summary for Class: AdminAdapter (Technique)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AdminAdapter</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 17)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;/*
+<i>2</i>&nbsp; * To change this license header, choose License Headers in Project Properties.
+<i>3</i>&nbsp; * To change this template file, choose Tools | Templates
+<i>4</i>&nbsp; * and open the template in the editor.
+<i>5</i>&nbsp; */
+<i>6</i>&nbsp;package Technique;
+<i>7</i>&nbsp;
+<i>8</i>&nbsp;import DAO.AdministrateurDAO;
+<i>9</i>&nbsp;import Entity.Administrateur;
+<i>10</i>&nbsp;import java.util.List;
+<i>11</i>&nbsp;import javax.swing.table.AbstractTableModel;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;/**
+<i>14</i>&nbsp; *
+<i>15</i>&nbsp; * @author user
+<i>16</i>&nbsp; */
+<i>17</i>&nbsp;public class AdminAdapter extends AbstractTableModel {
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;    public List&lt;Administrateur&gt; admins;
+<i>20</i>&nbsp;
+<b class="nc"><i>21</i>&nbsp;    public String[] header = {&quot;Id&quot;, &quot;Nom&quot;, &quot;Prenom&quot;, &quot;Mail&quot;, &quot;password&quot;, &quot;privilege&quot;};</b>
+<i>22</i>&nbsp;
+<b class="nc"><i>23</i>&nbsp;    public AdminAdapter() {</b>
+<i>24</i>&nbsp;
+<b class="nc"><i>25</i>&nbsp;        admins = new AdministrateurDAO().displayAll();</b>
+<i>26</i>&nbsp;    }
+<i>27</i>&nbsp;
+<b class="nc"><i>28</i>&nbsp;    public AdminAdapter(List&lt;Administrateur&gt; admins) {</b>
+<b class="nc"><i>29</i>&nbsp;        this.admins = admins;</b>
+<i>30</i>&nbsp;    }
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    @Override
+<i>33</i>&nbsp;    public int getRowCount() {
+<b class="nc"><i>34</i>&nbsp;        return admins.size();</b>
+<i>35</i>&nbsp;    }
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    @Override
+<i>38</i>&nbsp;    public int getColumnCount() {
+<b class="nc"><i>39</i>&nbsp;        return header.length;</b>
+<i>40</i>&nbsp;    }
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    @Override
+<i>43</i>&nbsp;    public Object getValueAt(int rowIndex, int columnIndex) {
+<b class="nc"><i>44</i>&nbsp;        switch (columnIndex) {// parcour par colonne</b>
+<i>45</i>&nbsp;            case 0:
+<b class="nc"><i>46</i>&nbsp;                return admins.get(rowIndex).getId();</b>
+<i>47</i>&nbsp;            case 1:
+<b class="nc"><i>48</i>&nbsp;                return admins.get(rowIndex).getNom();</b>
+<i>49</i>&nbsp;            case 2:
+<b class="nc"><i>50</i>&nbsp;                return admins.get(rowIndex).getPrenom();</b>
+<i>51</i>&nbsp;            case 3:
+<b class="nc"><i>52</i>&nbsp;                return admins.get(rowIndex).getMail();</b>
+<i>53</i>&nbsp;            case 4:
+<b class="nc"><i>54</i>&nbsp;                return admins.get(rowIndex).getPassword();</b>
+<i>55</i>&nbsp;            case 5:
+<b class="nc"><i>56</i>&nbsp;                return admins.get(rowIndex).getPrivilege();</b>
+<i>57</i>&nbsp;
+<i>58</i>&nbsp;            default:
+<b class="nc"><i>59</i>&nbsp;                return null;</b>
+<i>60</i>&nbsp;        }
+<i>61</i>&nbsp;    }
+<i>62</i>&nbsp;
+<i>63</i>&nbsp;    @Override
+<i>64</i>&nbsp;    public String getColumnName(int column) { // nom des colonnes
+<b class="nc"><i>65</i>&nbsp;        return header[column];</b>
+<i>66</i>&nbsp;    }
+<i>67</i>&nbsp;
+<b class="nc"><i>68</i>&nbsp;    boolean[] canEdit = new boolean[]{</b>
+<i>69</i>&nbsp;        false, true, true
+<i>70</i>&nbsp;    };
+<i>71</i>&nbsp;
+<i>72</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2015-05-16 11:20</div>
+</div>
+</body>
+</html>

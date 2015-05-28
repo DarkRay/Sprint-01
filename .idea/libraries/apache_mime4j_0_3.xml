@@ -1,0 +1,35 @@
+<component name="libraryTable">
+  <library name="apache-mime4j-0.3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/apache-mime4j-0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/DJNativeSwing-SWT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/DJNativeSwing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpclient-4.1-alpha1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpcore-4.1-alpha1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/httpmime-4.0-alpha4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javax.mail.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcalendar-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcommon-1.0.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcommon-1.0.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfreechart-1.0.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jfreechart-1.0.19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/org.apache.commons.logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/restfb-1.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swingx-all-1.6.5-1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swingx-ws-r317.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/weblaf-complete-1.28.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <NATIVE>
+      <root url="jar://$PROJECT_DIR$/lib/swt.jar!/" />
+    </NATIVE>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/java-json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/restfb-1.8.0.jar!/" />
+    </SOURCES>
+  </library>
+</component>

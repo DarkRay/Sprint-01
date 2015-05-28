@@ -1,0 +1,128 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: OSMTileFactoryInfo</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">Technique</a> ]
+</div>
+
+<h1>Coverage Summary for Class: OSMTileFactoryInfo (Technique)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">OSMTileFactoryInfo</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 4)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;/*
+<i>2</i>&nbsp; * To change this license header, choose License Headers in Project Properties.
+<i>3</i>&nbsp; * To change this template file, choose Tools | Templates
+<i>4</i>&nbsp; * and open the template in the editor.
+<i>5</i>&nbsp; */
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;package Technique;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import org.jdesktop.swingx.mapviewer.TileFactoryInfo;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;/**
+<i>12</i>&nbsp; *
+<i>13</i>&nbsp; * @author FATHLLAH Wael
+<i>14</i>&nbsp; */
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;/**
+<i>18</i>&nbsp; * Uses OpenStreetMap
+<i>19</i>&nbsp; * @author Martin Dummer
+<i>20</i>&nbsp; */
+<i>21</i>&nbsp;public class OSMTileFactoryInfo extends TileFactoryInfo
+<i>22</i>&nbsp;{
+<i>23</i>&nbsp;	private static final int max = 19;
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;	/**
+<i>26</i>&nbsp;	 * Default constructor
+<i>27</i>&nbsp;	 */
+<i>28</i>&nbsp;	public OSMTileFactoryInfo()
+<i>29</i>&nbsp;	{
+<b class="nc"><i>30</i>&nbsp;		super(&quot;OpenStreetMap&quot;, </b>
+<i>31</i>&nbsp;				1, max - 2, max, 
+<i>32</i>&nbsp;				256, true, true, 					// tile size is 256 and x/y orientation is normal
+<i>33</i>&nbsp;				&quot;http://tile.openstreetmap.org&quot;,
+<i>34</i>&nbsp;				&quot;x&quot;, &quot;y&quot;, &quot;z&quot;);						// 5/15/10.png
+<i>35</i>&nbsp;	}
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;	@Override
+<i>38</i>&nbsp;	public String getTileUrl(int x, int y, int zoom)
+<i>39</i>&nbsp;	{
+<b class="nc"><i>40</i>&nbsp;		zoom = max - zoom;</b>
+<b class="nc"><i>41</i>&nbsp;		String url = this.baseURL + &quot;/&quot; + zoom + &quot;/&quot; + x + &quot;/&quot; + y + &quot;.png&quot;;</b>
+<b class="nc"><i>42</i>&nbsp;		return url;</b>
+<i>43</i>&nbsp;	}
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2015-05-16 11:20</div>
+</div>
+</body>
+</html>
